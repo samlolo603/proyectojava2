@@ -1,0 +1,16 @@
+package proyectojava2.jv;
+
+public class DetalleVenta {
+    private Producto producto;
+    private int cantidad;
+
+    public DetalleVenta(Producto producto, int cantidad) {
+        this.producto = producto;
+        this.cantidad = cantidad;
+    }
+
+    public double calcularSubtotal() {
+        double precioAplicado = producto.getPrecioAplicable(cantidad);
+        return precioAplicado * cantidad;
+    }
+}
